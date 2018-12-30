@@ -7,7 +7,9 @@ const Canvas = require("canvas"); //npm i canvas
 const prefix = "G" // برفكس
 let profile = JSON.parse(fs.readFileSync("profile.json", "utf8"))
 
-
+client.on('ready', ready => {
+client.user.setGame(`Galaxy Server`,`https://twitch.tv/ichbinxirdx`)
+});
 
 client.on("message", message => {
     if (message.author.bot || !message.guild) return; 
